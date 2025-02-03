@@ -1,3 +1,8 @@
+"""
+This file demonstrates how to define a `Cercle` class 
+with methods to calculate the circumference, 
+area, and diameter, as well as to display this information.
+"""
 class Cercle:
     def __init__(self, rayon):
         self.rayon = rayon

@@ -1,3 +1,7 @@
+"""
+This file demonstrates how to define an `Operation` class 
+with a method to add two numbers.
+"""
 class Operation:
     def __init__(self, nombre1, nombre2):
         self.nombre1 = nombre1

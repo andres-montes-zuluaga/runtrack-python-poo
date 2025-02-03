@@ -1,3 +1,8 @@
+"""
+This file demonstrates how to define a `Point` class 
+with methods to display and change the coordinates 
+of a point in a 2D plane.
+"""
 class Point:
     def __init__(self, x, y):
         self.x = x

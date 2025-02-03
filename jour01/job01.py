@@ -1,3 +1,7 @@
+"""
+This file demonstrates how to define an `Operation` class 
+and create an instance of this class.
+"""
 class Operation:
     def __init__(self, nombre1, nombre2):
         self.nombre1 = nombre1

@@ -1,3 +1,8 @@
+"""
+This file demonstrates how to define a `Personnage` class 
+with methods to move a character 
+in a 2D plane and display its position.
+"""
 class Personnage:
     def __init__(self, x, y):
         self.x = x

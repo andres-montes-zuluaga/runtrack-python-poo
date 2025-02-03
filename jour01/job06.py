@@ -1,3 +1,7 @@
+"""
+This file demonstrates how to define an `Animal` class 
+with methods to age the animal and change its name.
+"""
 class Animal:
     
     def __init__(self, prenom):

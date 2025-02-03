@@ -1,3 +1,8 @@
+"""
+This file demonstrates how to define a `Produit` class 
+with methods to calculate the total price including tax (TTC) 
+and display product information.
+"""
 class Produit:
     def __init__(self, nom, prixHT, TVA):
         self.nom = nom

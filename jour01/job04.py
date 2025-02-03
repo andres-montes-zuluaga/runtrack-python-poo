@@ -1,3 +1,7 @@
+"""
+This file demonstrates how to define a `Personne` class 
+with a method to display a person's introduction.
+"""
 class Personne:
     def __init__(self, nom, prenom):
         self.nom = nom
