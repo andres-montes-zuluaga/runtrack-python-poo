@@ -1,0 +1,67 @@
+class Personnage:
+    def __init__(self, nom, vie):
+        self.nom = str(nom)
+        self.vie = int(vie)
+    
+    def attaquer(self):
+        self.vie -= 10
+
+class Jeu:
+    def choisirNiveau(self):
+        niveau_valid = False
+        while not niveau_valid:
+            try:
+                niveau = int(input("Entrez le niveau de difficulté (1-6): "))
+                if niveau < 1 or niveau > 6:
+                    print("Niveau invalide!")
+                else:
+                    niveau_valid = True
+                    return niveau
+            except ValueError:
+                print("Entre un nombre entier!")
+
+    def lancerJeu(self, nom, vie, niveau):
+        if niveau == 1:
+            self.hero = Personnage(nom, vie)
+            self.ennemi = Personnage("GOBLIN", 10)
+        elif niveau == 2:
+            self.hero = Personnage(nom, vie)
+            self.ennemi = Personnage("ORC", 20)
+        elif niveau == 3:
+            self.hero = Personnage(nom, vie)
+            self.ennemi = Personnage("DRAGON", 30)
+        elif niveau == 4:
+            self.hero = Personnage(nom, vie)
+            self.ennemi = Personnage("HYDRE", 40)
+        elif niveau == 5:
+            self.hero = Personnage(nom, vie)
+            self.ennemi = Personnage("CERBÈRE", 50)
+        elif niveau == 6:
+            self.hero = Personnage(nom, vie)
+            self.ennemi = Personnage("TITAN", 60)
+    
+    def verifierSante(self):
+        print(f"Hero: {self.hero.vie} PV")
+        print(f"Ennemi: {self.ennemi.vie} PV")
+    
+    def gagnante(self):
+        if self.hero.vie <= 0:
+            print("Vous avez perdu!")
+        elif self.ennemi.vie <= 0:
+            print("Vous avez gagné!")
+        else:
+            print("Le combat continue...")
+
+# Création du jeu
+print("Bienvenue dans le jeu!")
+nom = input("Entrez le nom de votre personnage: ")
+
+
+jeu = Jeu() # Création de l'objet jeu car la classe Jeu n'a pas de constructeur
+jeu.lancerJeu(nom, 100, jeu.choisirNiveau())
+
+print(f"Le combat commence! {jeu.hero.nom} vs {jeu.ennemi.nom}")
+jeu.hero.attaquer()
+jeu.ennemi.attaquer()
+jeu.verifierSante()
+jeu.gagnante()
