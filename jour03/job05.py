@@ -1,3 +1,9 @@
+"""
+This script demonstrates the use of classes and objects in a simple game.
+The `Personnage` class represents a character with a name and health points.
+The `Jeu` class manages the game flow, including selecting difficulty levels and initiating battles.
+"""
+
 class Personnage:
     def __init__(self, nom, vie):
         self.nom = str(nom)
@@ -52,12 +58,12 @@ class Jeu:
         else:
             print("Le combat continue...")
 
-# Création du jeu
+# Game starts here
 print("Bienvenue dans le jeu!")
 nom = input("Entrez le nom de votre personnage: ")
 
 
-jeu = Jeu() # Création de l'objet jeu car la classe Jeu n'a pas de constructeur
+jeu = Jeu() # Objet jeu creation because the Jeu class has no constructor
 jeu.lancerJeu(nom, 100, jeu.choisirNiveau())
 
 print(f"Le combat commence! {jeu.hero.nom} vs {jeu.ennemi.nom}")

@@ -1,3 +1,8 @@
+"""
+This script demonstrates the use of classes and objects in managing bank accounts.
+The `CompteBancaire` class represents a bank account with various operations such as deposit, withdrawal, and transfer.
+"""
+
 class CompteBancaire:
     def __init__(self, num_compte, nom, prenom, solde, decouvert):
         self.__num_compte = num_compte

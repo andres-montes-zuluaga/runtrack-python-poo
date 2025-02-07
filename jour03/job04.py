@@ -1,3 +1,9 @@
+"""
+This script demonstrates the use of classes and objects in managing a football team.
+The `Joueur` class represents a player with various statistics.
+The `EquipeDeFoot` class manages a team of players and their statistics.
+"""
+
 class Joueur:
     def __init__(self, nom, numero, position, buts_marques, passes_decisives, cartons_jaunes, cartons_rouges):
         self._nom = nom
@@ -51,29 +57,29 @@ class EquipeDeFoot:
                 joueur._cartons_jaunes = cartons_jaunes
                 joueur._cartons_rouges = cartons_rouges
 
-# Création des joueurs de l'équipe de l'Olympique de Marseille
+# Add 5 players to OM
 joueur1_om = Joueur("Camille Cousin", 10, "Attaquant", 5, 3, 1, 0)
 joueur2_om = Joueur("Mélissa Dupont", 7, "Milieu", 2, 4, 2, 0)
 joueur3_om = Joueur("Jean Dupuis", 3, "Défenseur", 0, 1, 3, 1)
 joueur4_om = Joueur("Marie Durand", 1, "Gardien", 0, 0, 0, 0)
 joueur5_om = Joueur("Paul Dupont", 9, "Attaquant", 3, 2, 0, 0)
-# Création de l'équipe de l'Olympique de Marseille
+# OM team creation
 equipe_om = EquipeDeFoot("Olympique de Marseille", [joueur1_om, joueur2_om, joueur3_om, joueur4_om, joueur5_om])
 
-# Création des joueurs de l'équipe du Paris Saint-Germain
+# Add 5 players to Paris Saint-Germain
 joueur1_psg = Joueur("Amelie Dupont", 10, "Attaquant", 7, 3, 2, 0)
 joueur2_psg = Joueur("Clarisse Martin", 11, "Milieu", 4, 6, 2, 0)
 joueur3_psg = Joueur("Justine Telmat", 3, "Défenseur", 0, 1, 3, 1)
 joueur4_psg = Joueur("Delia Gorog", 1, "Gardien", 0, 0, 1, 0)
 joueur5_psg = Joueur("Melissa Felenbok", 7, "Attaquant", 6, 3, 0, 0)
-# Création de l'équipe du Paris Saint-Germain
+# Paris Saint-Germain team creation
 equipe_psg = EquipeDeFoot("Paris Saint-Germain", [joueur1_psg, joueur2_psg, joueur3_psg, joueur4_psg, joueur5_psg])
 
-# Présenter l'ensamble de joueurs de chaque équipe
+# Print the statistics of all players in each team
 equipe_om.afficherStatistiquesJoueurs()
 equipe_psg.afficherStatistiquesJoueurs()
 
-# Mettre à jour les statistiques d'un joueur
+# Simuler un match de football
 joueur5_om.marquerUnBut()
 joueur5_om.effectuerUnePasseDecisive()
 joueur5_om.recevoirUnCartonJaune()
@@ -86,6 +92,6 @@ joueur1_psg.marquerUnBut()
 joueur3_om.effectuerUnePasseDecisive()
 joueur3_psg.recevoirUnCartonJaune()
 
-# Présenter l'ensamble de joueurs de chaque équipe
+# Print the updated statistics of all players in each team
 equipe_om.afficherStatistiquesJoueurs()
 equipe_psg.afficherStatistiquesJoueurs()

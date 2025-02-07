@@ -1,3 +1,9 @@
+"""
+This script demonstrates the use of classes and objects in managing a task list.
+The `Tache` class represents a task with a title, description, and status.
+The `ListeDesTaches` class manages a list of tasks, allowing for adding, removing, and filtering tasks.
+"""
+
 class Tache:
     def __init__(self, titre, description, statut):
         self._titre = titre
